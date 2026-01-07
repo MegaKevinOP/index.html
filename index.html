@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAEB HAST | Gorras Exclusivas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header>
+        <nav>
+            <div class="logo">CAEB HAST</div>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#pedido">Hacer Pedido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>ESTILO SIN LÍMITES</h1>
+        <p>Descubre la colección premium de CAEB HAST.</p>
+        <a href="#productos" class="btn-primary">Ver Colección</a>
+    </section>
+
+    <section id="productos" class="products">
+        <h2>Nuestras Gorras</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="img-placeholder">Gorra Black Edition</div>
+                <h3>Classic Black</h3>
+                <p>$25.00</p>
+                <button onclick="seleccionarProducto('Classic Black')">Comprar ahora</button>
+            </div>
+            <div class="card">
+                <div class="img-placeholder">Gorra Street White</div>
+                <h3>Street White</h3>
+                <p>$28.00</p>
+                <button onclick="seleccionarProducto('Street White')">Comprar ahora</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pedido" class="form-section">
+        <div class="container">
+            <h2>Finaliza tu Compra</h2>
+            <form action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+                <label>Gorra Seleccionada</label>
+                <input type="text" id="producto_elegido" name="producto" readonly required>
+                
+                <label>Nombre Completo</label>
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                
+                <label>Correo Electrónico</label>
+                <input type="email" name="email" placeholder="correo@ejemplo.com" required>
+                
+                <label>Dirección de Envío</label>
+                <textarea name="direccion" rows="3" required></textarea>
+
+                <button type="submit" class="btn-submit">Confirmar Pedido</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 CAEB HAST. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
